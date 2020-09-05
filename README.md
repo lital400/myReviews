@@ -19,7 +19,8 @@ Specifications:
 
 1. The page will be for a product listing of your choice 
 (include a product description, image and star rating based on the number of reviews submitted).
-Note: there won’t be a way to store the reviews, so when the page first loads the product’s star rating should be set at 0 (no stars).
+Note: there won’t be a way to store the reviews, 
+so when the page first loads the product’s star rating should be set at 0 (no stars).
 
 2. There should be a button for users to leave a rating (1-5 stars), an optional comment and their name. 
 Provide basic error checking and input validation.
