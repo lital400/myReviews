@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Product Review Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script defer src="dist/myScript.js" ></script>
+  </head>
+
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
+            <div class="container">
+                <p class="navbar-brand">My Reviews</p>
+            </div>
+        </nav>
+    </header>
+
+        <main role="main" class="pb-3 pt-3">
+            <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6 w-50">
+                            <h1 class="font-weight-bold">iPhone 11</h1>
+                                <span class="rate"></span>
+                                <span class="rate"></span>
+                                <span class="rate"></span>
+                                <span class="rate"></span>
+                                <span class="rate"></span>
+                            <p><span id="average"></span> average based on <span id="reviewnum"></span> reviews.</p>
+                            <div class="w-50">
+                                <p>A dual‑camera system captures more of what you see and love. 
+                                    The fastest chip ever in a smartphone and all‑day battery life let you do more and charge less. 
+                                    And the highest‑quality video in a smartphone, so your memories look better than ever.</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 w-50">
+                            <img src="iphone11.jpg" alt="iPhone 11" width="250" height="300">
+                        </div>
+                    </div>
+                    <hr style="border:3px solid #f1f1f1">
+             </div>
+
+             <div class="container">
+                <h2 class="font-weight-bold">Write a Review</h2>
+                <form class="mt-3">
+                    <div class="row">
+                        <div class="column">
+                            <label for="name">Name:</label><br/>
+                            <input id="name" type="text"/> &nbsp;&nbsp;<span id="nameErr" class="text-danger"></span>
+                        </div>
+                    </div>  
+                    <div class="row">
+                        <div class="column">
+                            <label for="comment">Comment:</label><br/>
+                            <textarea id="comment" rows="5" cols="33"></textarea>
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="column">
+                            <label for="star">Star Rating:</label>
+                            <div id="stars" class="stars" data-rating="0">
+                                <span class="star">&nbsp;</span>
+                                <span class="star">&nbsp;</span>
+                                <span class="star">&nbsp;</span>
+                                <span class="star">&nbsp;</span>
+                                <span class="star">&nbsp;</span>
+                            </div>
+                            &nbsp;&nbsp;<span id="starErr" class="text-danger"></span>
+                        </div>
+                    </div>  
+                    <div class="row">
+                        <div class="column">
+                            <button type="button" class="btn btn-primary mt-3" id="submitReview">Post Review</button>
+                        </div>
+                    </div>
+                </form>
+                <hr style="border:3px solid #f1f1f1">
+            </div>
+            
+            <template id="responseTemplate">
+                <div class="container">
+                    <div class="row"><p><b>Name: </b><span id="reviewName"></span></p></div>
+                    <div class="row"><p><b>Date Posted: </b><span id="reviewDate"></span></p></div>
+                    <div class="row"><p><b>Comment: </b><span id="reviewComment"></span></p></div>
+                    <div class="row"><p><b>Stars Rating: &nbsp;</b></p><span id="reviewStars"></span></div>
+                    <hr align="left" class="reviewHr" style="border:3px solid #f1f1f1">
+                </div>
+            </template>
+
+            <div class="container">
+                <h2 class="mb-3 mt-4 font-weight-bold">User Reviews</h2>
+                <div id="displayReviews"></div>
+            </div>
+
+            <footer class="border-top footer text-white-50 bg-primary mb-0">
+                <div class="container">
+                    &copy; 2020 -My Reviews-
+                </div>
+            </footer>
+
+    <script src="https://kit.fontawesome.com/e19c476714.js"></script>
+  </body>
+</html>
